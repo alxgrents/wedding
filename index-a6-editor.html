@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Свадьба Марии и Александра 6 февраля 2027 — приглашение в формате A6.">
+  <title>Мария и Александр — приглашение A6 · редактор фото</title>
+  <link rel="stylesheet" href="styles-a6.css">
+  <link rel="stylesheet" href="image-editor.css">
+  <script src="image-editor.js" defer></script>
+</head>
+<body class="image-editor" data-editor-page="a6">
+<div class="editor-layout">
+<aside class="editor-panel editor-images" aria-labelledby="images-title"><h2 id="images-title">Изображения</h2><p class="editor-hint">X и Y — сдвиг в % от размера рамки. Масштаб — в %. Выбор другого фото сбрасывает его настройки.</p><div id="image-controls"></div></aside>
+<main class="sheet">
+  <header class="hero">
+    <div><h1>Мария<br><em>и</em> Александр</h1><time datetime="2027-02-06">6 февраля 2027</time></div>
+    <span class="hero-photo-frame image-frame image-frame-hero"><img data-image-id="hero" data-image-label="Главное фото" src="assets/images/couple.jpg" width="493" height="622" alt="Невеста и жених на ступенях"></span>
+  </header>
+  <section class="invitation" aria-label="Приглашение"><p>Наша свадьба без вас не будет такой счастливой, уютной и весёлой! Приглашаем отметить этот день вместе с нами!</p></section>
+  <section class="day"><h2>Программа дня</h2><ol><li><time>15:30</time> Сбор гостей</li><li><time>16:00</time> Выездная церемония</li><li><time>17:00</time> Банкет</li></ol></section>
+  <section class="place"><h2>Место проведения</h2><p><strong>Банкетный зал More Amore</strong><br>ул. Энгельса, 107</p></section>
+  <section class="dress"><h2>Дресс-код</h2><p>Мы очень старались сделать праздник красивым и будем рады, если в своих нарядах вы добавите акценты зелёного или фиолетового цветов. Это не обязательно.</p><div class="palette"><div><div class="swatches greens" aria-hidden="true"><i></i><i></i><i></i></div><span>Зелёный</span></div><div><div class="swatches purples" aria-hidden="true"><i></i><i></i><i></i></div><span>Фиолетовый</span></div></div></section>
+  <section class="wishes" aria-label="Пожелание о цветах"><div class="animal-cards"><figure><span class="image-frame image-frame-animal"><img data-image-id="animal-1" data-image-label="Карточка 1" src="animals/photo_5373163315078570329_y.jpg" loading="lazy" alt="Собака крупным планом" width="718" height="718"></span></figure><figure><span class="image-frame image-frame-animal"><img data-image-id="animal-2" data-image-label="Карточка 2" src="animals/photo_5417868611755386280_y.jpg" loading="lazy" alt="Серый кот с янтарными глазами" width="964" height="964"></span></figure><figure><span class="image-frame image-frame-animal"><img data-image-id="animal-3" data-image-label="Карточка 3" src="animals/photo_5417868611755386284_y.jpg" loading="lazy" alt="Трёхцветная кошка с зелёными глазами" width="794" height="794"></span></figure><figure><span class="image-frame image-frame-animal"><img data-image-id="animal-4" data-image-label="Карточка 4" src="animals/photo_5417868611755386286_y.jpg" loading="lazy" alt="Полосатый кот" width="568" height="568"></span></figure></div><p class="flowers-message">Просим не дарить нам цветы, так как наши животные не позволят нам насладиться их красотой в полной мере.</p></section>
+  <section class="contact" aria-label="Контакт организатора"><p>Если у вас остались вопросы по нашей свадьбе или вы хотите подготовить особенное поздравление, вы можете связаться в любом мессенджере с нашим организатором Таней (<span style="white-space:nowrap">8 906 892-05-30</span>).</p></section>
+</main>
+<aside class="editor-panel editor-actions" aria-labelledby="actions-title"><h2 id="actions-title">Настройки</h2><button type="button" id="reset-images">Сбросить всё</button><button type="button" id="export-images">Экспорт JSON</button><button type="button" id="import-images">Загрузить JSON</button><input type="file" id="import-file" accept=".json,application/json" hidden><p class="editor-hint">Сохраните JSON, чтобы позже восстановить изображения и кадрирование. При печати панели скрыты.</p><p id="editor-status" role="status" aria-live="polite"></p></aside>
+</div>
+</body>
+</html>

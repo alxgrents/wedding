@@ -1,0 +1,38 @@
+:root {
+  --color-browser-background: #d3cdd6;
+  --color-text: #252525;
+  --color-page: #E7DCEC;
+  --color-purple: #775C87;
+  --color-green: #70906B;
+  --color-shadow: #0002;
+  --color-panel: #E7DCECcf;
+  --color-sage-panel: #B8C6C2;
+  --color-lilac-panel: #C4A0CC;
+  --color-palette-green-dark: #4c614d;
+  --color-palette-green-medium: #829075;
+  --color-palette-green-light: #b6c0a6;
+  --color-palette-purple-dark: #685274;
+  --color-palette-purple-medium: #9680aa;
+  --color-palette-purple-light: #c5b8d1;
+  --color-photo-card: #fff;
+  --color-hero-backing: rgba(231,220,236,.68);
+  --color-soft-backing: rgba(231,220,236,.8);
+  --color-transparent: transparent;
+}
+
+@page{size:A6 portrait;margin:0}
+*{box-sizing:border-box}html{color-scheme:light}body{margin:0;background:var(--color-browser-background);color:var(--color-text);font:7pt/1.28 Arial,Helvetica,sans-serif}
+.sheet{width:105mm;height:148mm;margin:0 auto;padding:4mm;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:24mm 18mm 22mm 24mm 24mm 18mm;gap:2mm;background-color:var(--color-page);background-image:repeating-linear-gradient(125deg,var(--color-transparent) 0 calc(40mm - 1px),var(--color-purple) 40mm calc(50mm - 1px),var(--color-transparent) 50mm calc(117.5mm - 1px),var(--color-green) 117.5mm calc(127.5mm - 1px),var(--color-transparent) 127.5mm 195mm);box-shadow:0 4px 30px var(--color-shadow)}
+h1,h2,p,figure,ol{margin:0}h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:400}h2{font-size:11pt;line-height:1.1;margin-bottom:1.5mm}img{display:block;max-width:100%;height:auto}section{min-width:0;padding:2mm;background:var(--color-panel)}
+.hero{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:0 3mm}.hero h1{font-size:18pt;line-height:1;letter-spacing:-.5pt}.hero em{color:var(--color-purple);font-size:15pt}.eyebrow{font-size:5.5pt;letter-spacing:.2pt;margin-bottom:1.5mm}.hero time{display:block;font:10pt Georgia,serif;margin-top:1.5mm}.hero>img{height:24mm;width:auto;border-radius:12mm 12mm 0 0}
+.invitation{grid-column:1/-1;background:var(--color-sage-panel);display:flex;align-items:center;text-align:center;padding:2mm 3mm}.invitation p{font:10.5pt/1.1 Georgia,serif;letter-spacing:-.1pt}
+.day ol{list-style:none;padding:0}.day li{margin-bottom:.7mm;font-size:7pt}.day time{display:inline-block;width:10mm;font:8pt Georgia,serif}.place p{font-size:8pt;line-height:1.5}.place strong{font-weight:400}
+.dress{grid-column:1/-1;background:var(--color-lilac-panel);display:grid;grid-template-columns:1fr 30mm;column-gap:3mm;align-content:center}.dress h2{grid-column:1/-1}.dress p{font-size:7.5pt;line-height:1.25}.palette{display:flex;gap:2mm;justify-content:center;align-items:center;text-align:center;font-size:6pt}.swatches{display:flex;padding-left:1mm;margin-bottom:1mm}.swatches i{display:block;width:5mm;height:5mm;border-radius:50%;border:.4mm solid var(--color-lilac-panel);margin-left:-1mm}.greens i:nth-child(1){background:var(--color-palette-green-dark)}.greens i:nth-child(2){background:var(--color-palette-green-medium)}.greens i:nth-child(3){background:var(--color-palette-green-light)}.purples i:nth-child(1){background:var(--color-palette-purple-dark)}.purples i:nth-child(2){background:var(--color-palette-purple-medium)}.purples i:nth-child(3){background:var(--color-palette-purple-light)}
+.wishes{grid-column:1/-1;display:grid;grid-template-columns:1fr 27mm;gap:3mm;align-items:center}.wishes .flowers-message{grid-column:1;grid-row:1;font:10pt/1.12 Georgia,'Times New Roman',serif}.animal-cards{grid-column:2;grid-row:1;display:grid;grid-template-columns:1fr 1fr;gap:1.5mm;padding:0 1mm}.animal-cards figure{padding:.5mm .5mm 1.3mm;background:var(--color-photo-card);box-shadow:0 .5mm 1mm var(--color-shadow);transform:rotate(-5deg)}.animal-cards figure:nth-child(even){transform:rotate(5deg)}.animal-cards img{width:100%}
+.contact{grid-column:1/-1;background:var(--color-sage-panel);text-align:center;display:flex;flex-direction:column;justify-content:center;padding:1.5mm 3mm;gap:1mm}.contact p,.contact .phone{font:7pt/1.25 Arial,Helvetica,sans-serif}.contact .phone{white-space:nowrap;user-select:text}
+@media print{body{background:none}.sheet{margin:0;box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+.hero>div{background:var(--color-hero-backing);box-shadow:0 0 2mm 1mm var(--color-hero-backing);border-radius:1mm}
+
+.hero>div,.day,.place,.wishes{position:relative;isolation:isolate;background:var(--color-transparent);box-shadow:none}
+.hero>div::before,.day::before,.place::before,.wishes::before{content:"";position:absolute;inset:-.7mm;z-index:-1;pointer-events:none;background:var(--color-soft-backing);filter:blur(1.5mm);border-radius:2mm}

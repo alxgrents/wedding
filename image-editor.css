@@ -1,0 +1,155 @@
+body.image-editor {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: 330px 105mm 220px;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    width: max-content;
+    min-width: 100%;
+    padding: 24px;
+}
+
+.editor-layout > .sheet { margin: 0; }
+
+.editor-panel {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100vh - 48px);
+    overflow: auto;
+    padding: 18px;
+    border: 1px solid #b9aebd;
+    border-radius: 12px;
+    background: #faf8fa;
+    color: #29232d;
+    font: 14px/1.4 Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 20px #30243512;
+}
+
+.editor-panel h2 {
+    margin: 0 0 12px;
+    font: 600 18px/1.2 Arial, Helvetica, sans-serif;
+}
+
+.editor-hint {
+    margin: 10px 0 16px;
+    color: #655c69;
+    font-size: 12px;
+}
+
+.image-control {
+    min-width: 0;
+    margin: 0 0 16px;
+    padding: 12px;
+    border: 1px solid #d9d1dd;
+    border-radius: 8px;
+}
+
+.image-control:last-child { margin-bottom: 0; }
+.image-control legend { padding: 0 5px; font-weight: 600; }
+.image-control > label { display: block; margin-bottom: 5px; }
+
+.editor-panel select,
+.editor-panel input,
+.editor-panel button {
+    font: inherit;
+    color: inherit;
+}
+
+.editor-panel select,
+.editor-panel input[type="number"] {
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #baafc0;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.image-adjustments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.image-adjustments label { font-size: 12px; }
+.image-adjustments input { display: block; margin-top: 5px; }
+
+.editor-panel button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border: 1px solid #5d4459;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    text-align: left;
+}
+
+.editor-panel button:hover { background: #ede6ef; }
+.editor-panel button:focus-visible,
+.editor-panel select:focus-visible,
+.editor-panel input:focus-visible { outline: 2px solid #5d4459; outline-offset: 2px; }
+#export-images { background: #5d4459; color: #fff; }
+#export-images:hover { background: #493446; }
+#editor-status { margin: 12px 0 0; overflow-wrap: anywhere; font-size: 12px; }
+#editor-status[data-error="true"] { color: #a12031; }
+
+.image-frame {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--color-page);
+}
+
+.image-frame > picture { display: contents; }
+
+.image-frame img {
+    position: absolute;
+    inset: auto;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform-origin: center;
+}
+
+.image-frame-animal { width: 100%; aspect-ratio: 1; }
+
+.image-frame-cover {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+}
+
+.image-frame-cover .cover-photo {
+    position: absolute;
+    z-index: auto;
+    object-position: 50% 44%;
+}
+
+@media print {
+    html, body.image-editor {
+        width: 105mm;
+        height: 148mm;
+        min-width: 0;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .editor-layout { display: block; width: 105mm; min-width: 0; padding: 0; }
+    .editor-panel { display: none; }
+    .editor-layout > main { margin: 0; box-shadow: none; }
+}
