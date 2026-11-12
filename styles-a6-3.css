@@ -5,10 +5,9 @@
   --color-text: #18161a;
   --color-page: #bbb3b1;
   --color-purple: #5d4459;
-  --color-green: #545651;
+  --color-green: #58604b;
   --color-sage-panel: #403542;
   --color-shadow: #0002;
-  --stripe-offset: 18.9mm; /* 18% of the 105mm sheet width: 3% + 20% - 10% + 5%. */
 }
 
 @page {
@@ -64,29 +63,6 @@ body {
   );
 }
 
-.cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: linear-gradient(
-    125deg,
-    transparent 0 calc(40mm - 1px),
-    var(--color-purple) 40mm calc(50mm - 1px),
-    transparent 50mm 100%
-  ), linear-gradient(
-    125deg,
-    transparent 0 calc(117.5mm - 1px),
-    var(--color-green) 117.5mm calc(127.5mm - 1px),
-    transparent 127.5mm 100%
-  );
-  background-size: 100% 100%;
-  background-position: calc(-1 * var(--stripe-offset)) 0, var(--stripe-offset) 0;
-  background-repeat: no-repeat;
-  opacity: .78;
-  pointer-events: none;
-}
-
 .cover-content {
   height: 100%;
   display: flex;
@@ -134,7 +110,11 @@ h1 em {
 time {
   display: block;
   padding: 3mm;
-  background: var(--color-green);
+  background: repeating-linear-gradient(
+    125deg,
+    var(--color-purple) 0 20mm,
+    var(--color-green) 20mm 40mm
+  );
   color: var(--color-page);
   font: 11pt/1.2 Georgia, 'Times New Roman', serif;
   letter-spacing: .7pt;

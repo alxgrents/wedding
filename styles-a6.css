@@ -86,7 +86,7 @@ h1,h2,p,figure,ol{margin:0}h1,h2{font-family:Georgia,'Times New Roman',serif;fon
 .palette-in-wishes .invitation p { font-size: 12.5pt; line-height: 1.1; }
 .palette-in-wishes .day li { font-size: 9.5pt; line-height: 1.1; margin-bottom: .4mm; }
 .palette-in-wishes .day li:last-child { margin-bottom: 0; }
-.palette-in-wishes .day time { font-size: 10pt; line-height: 1.1; color: var(--color-text); }
+.palette-in-wishes .day time { font-size: 10pt; font-weight: 700; line-height: 1.1; color: var(--color-text); }
 .palette-in-wishes .place p { font-size: 10.5pt; line-height: 1.1; }
 .palette-in-wishes .dress { grid-template-columns: 1fr; padding-block: 1.5mm; }
 .palette-in-wishes .dress p { font-size: 11pt; line-height: 1.18; }
